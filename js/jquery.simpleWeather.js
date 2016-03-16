@@ -72,7 +72,52 @@
             weather.link = result.item.link;
             weather.units = {temp: result.units.temperature, distance: result.units.distance, pressure: result.units.pressure, speed: result.units.speed};
             weather.wind = {chill: result.wind.chill, direction: compass[Math.round(result.wind.direction / 22.5)], speed: result.wind.speed};
-
+			var WC = result.item.condition.code;
+			
+			if (WC == 23 || WC == 24 || WC == 25 || WC == 32 || WC == 34 || WC == 36) {
+				document.getElementById("weather").style.background = "url(../img/weatherback.jpg)";
+				document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+			}
+			else if (WC == 5 || WC == 7 || WC == 13 || WC == 14 || WC == 15 || WC == 16 || WC == 41 || WC == 42 || WC == 43 || WC == 46) {
+				document.getElementById("weather").style.background = "url(../img/winterback.jpg)";
+				document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+			}
+			else if (WC == 0 || WC == 1 || WC == 2 || WC == 3 || WC == 4 || WC == 17 || WC == 37 || WC == 38 || WC == 39 || WC == 45 || WC == 47) {
+				document.getElementById("weather").style.background = "url(../img/stormback.jpg)";
+				document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+			}
+			else if (WC == 30 || WC == 44) {
+				document.getElementById("weather").style.background = "url(../img/partlycloudyback.jpg)";
+				document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+			}
+			else if (WC == 27 || WC == 29) {
+				document.getElementById("weather").style.background = "url(../img/nightcloudyback.jpg)";
+				document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+			}
+			else if (WC == 31 || WC == 33) {
+				document.getElementById("weather").style.background = "url(../img/nightclearback.jpg)";
+				document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+			}
+			else if (WC == 8 || WC == 10) {
+				document.getElementById("weather").style.background = "url(../img/iceback.jpg)";
+				document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+			}
+			else if (WC == 6 || WC == 11 || WC == 12 || WC == 18 || WC == 35 || WC == 40) {
+				document.getElementById("weather").style.background = "url(../img/heavyrainback.jpg)";
+				document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+			}
+			else if (WC == 19 || WC == 20 || WC == 21 || WC == 22) {
+				document.getElementById("weather").style.background = "url(../img/fogback.jpg)";
+				document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+			}
+			else if (WC == 9) {
+				document.getElementById("weather").style.background = "url(../img/drizzleback.jpg)";
+				document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+			}
+			else if (WC == 26 || WC == 28) {
+				document.getElementById("weather").style.background = "url(../img/cloudyback.jpg)";
+				document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+			};
             if(result.item.condition.temp < 80 && result.atmosphere.humidity < 40) {
               weather.heatindex = -42.379+2.04901523*result.item.condition.temp+10.14333127*result.atmosphere.humidity-0.22475541*result.item.condition.temp*result.atmosphere.humidity-6.83783*(Math.pow(10, -3))*(Math.pow(result.item.condition.temp, 2))-5.481717*(Math.pow(10, -2))*(Math.pow(result.atmosphere.humidity, 2))+1.22874*(Math.pow(10, -3))*(Math.pow(result.item.condition.temp, 2))*result.atmosphere.humidity+8.5282*(Math.pow(10, -4))*result.item.condition.temp*(Math.pow(result.atmosphere.humidity, 2))-1.99*(Math.pow(10, -6))*(Math.pow(result.item.condition.temp, 2))*(Math.pow(result.atmosphere.humidity,2));
             } else {

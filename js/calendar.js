@@ -33,10 +33,11 @@
 
         $.each(data.items, function(e, item) {
           var eventdate = item.start.dateTime || item.start.date ||'';
+          console.log(item.start.dateTime);
+          console.log(item.start.date);
           var summary = item.summary || '';
 					var description = item.description;
 					var location = item.location;
-					console.log(eventDate);
 					var eventDate = formatDate(eventdate, defaults.dateFormat.trim());
 					s ='<div class="eventtitle">'+ summary +'</div>';
 					s +='<div class="eventdate"> When: '+ eventDate +'</div>';

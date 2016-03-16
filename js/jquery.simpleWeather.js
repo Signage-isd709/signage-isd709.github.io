@@ -72,7 +72,8 @@
             weather.link = result.item.link;
             weather.units = {temp: result.units.temperature, distance: result.units.distance, pressure: result.units.pressure, speed: result.units.speed};
             weather.wind = {chill: result.wind.chill, direction: compass[Math.round(result.wind.direction / 22.5)], speed: result.wind.speed};
-			var WC = result.item.condition.code;
+	    //var WC = result.item.condition.code;
+	    var WC = 24;
 			
 			if (WC == 23 || WC == 24 || WC == 25 || WC == 32 || WC == 34 || WC == 36) {
 				document.getElementById("weather").style.background = "url(../img/weatherback.jpg)";

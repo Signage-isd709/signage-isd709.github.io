@@ -90,13 +90,13 @@ i {
 
 #weather ul {
   margin: 0;
-  margin-bottom: 30px;
   padding: 0;
 }
 
 #weather li {
   background: #fff;
   background: rgba(255,255,255,0.90);
+  margin-bottom: 30px;
   padding: 10px;
   display: inline-block;
   border-radius: 5px;

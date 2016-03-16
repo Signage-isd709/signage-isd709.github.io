@@ -63,7 +63,8 @@ time.icon span
 }
 </style>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   <script src="js/calendar.js" type="text/javascript"></script>
+    <script src="js/calendar.js" type="text/javascript"></script>
+    <script src="js/jquery.simpleWeather.js" type="text/javascript></script>"
 <script type="text/javascript">
    jQuery(function ($) {
        $('#eventlist').gCalReader({
@@ -72,6 +73,24 @@ time.icon span
          sortDescending: false
         });
 	 });
+$(document).ready(function() {
+  $.simpleWeather({
+    location: 'Austin, TX',
+    woeid: '',
+    unit: 'f',
+    success: function(weather) {
+      html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+      html += '<li class="currently">'+weather.currently+'</li>';
+      html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
+  
+      $("#weather").html(html);
+    },
+    error: function(error) {
+      $("#weather").html('<p>'+error+'</p>');
+    }
+  });
+});
 </script>
   </head>
   <body background="signage_background.png">
@@ -81,7 +100,8 @@ time.icon span
     <div id="sidebar_contents" style="background:#e3b73c; padding-top:5px; width:100%;">
         <iframe allowfullscreen="" width="100%" height="55px" data-src="https://freesecure.timeanddate.com/clock/i53vq5na/n3716/fn10/fs24/fc333/tct/pct/tt0/tw1/tb4" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock" mozallowfullscreen="" webkitallowfullscreen="" src="https://freesecure.timeanddate.com/clock/i53vq5na/n3716/fn10/fs24/fc333/tct/pct/tt0/tw1/tb4"></iframe>
         <div id="outerforecast" style="border-style:solid; border-width:2px; border-color:transparent; border-top-color:#444444; border-bottom-color:#444444; width:100%; margin:0px auto; height:245px;">
-            <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="60%" src="https://forecast.io/embed/#lat=46.786672&amp;lon=-92.100485&amp;name=Duluth&amp;color=#444444&amp;font=Georgia"></iframe>
+        	<div id="weather"></div>
+            //<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="60%" src="https://forecast.io/embed/#lat=46.786672&amp;lon=-92.100485&amp;name=Duluth&amp;color=#444444&amp;font=Georgia"></iframe>
         </div>
         <div>
         <p align="left">Upcoming Events:</p>

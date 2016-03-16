@@ -39,7 +39,9 @@
 					var description = item.description;
 					var location = item.location;
 					var eventDate = formatDate(eventdate, defaults.dateFormat.trim());
-					s ='<time datetime= ' + item.start.date + ' class="icon"><em>' + eventDate[3]; + '</em><strong>' + eventDate[1]; + '</strong><span>' + eventDate[2]; + '</span></time>';
+					s ='<time datetime= ' + item.start.date + ' class="icon"><em>Monday</em><strong>Febuary</strong><span>20</span></time>';
+					//s ='<time datetime= ' + item.start.date + ' class="icon"><em>' + eventDate[3]; + '</em><strong>' + eventDate[1]; + '</strong><span>' + eventDate[2]; + '</span></time>';
+					//<br><div class="eventtitle">'+ summary +'</div>
 					//s +='<div class="eventdate"> When: '+ eventDate[0]; +'</div>';
 					if(location) {
 						s +='<div class="location">Where: '+ location +'</div>';

@@ -154,11 +154,12 @@
       return [fd, monthCal, daynumCal, dayCal]; 
     }
   };
+  $(document).ready(function(){
   $('.CalEvents').slick({
     slidesToShow: 3,
     vertical: true,
     autoplay: true,
     arrows: false
   });
-
+});
 }(jQuery));

@@ -52,7 +52,7 @@
 					if(description) {
 						s +='<div class="description">'+ description +'</div>';
 					}
-					$($div).append('<div name="eventWrapper"><div name="eventIcon" align="left">' + calIcon + '</div><div name="eventInfo">' + s + '</div>');
+					$($div).append('<div name="eventWrapper"><tr><td><div name="eventIcon" align="left">' + calIcon + '</div></td><td><div name="eventInfo">' + s + '</div></td></tr>');
         });
       },
       error: function(xhr, status) {

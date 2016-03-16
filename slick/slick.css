@@ -104,13 +104,13 @@
 }
 .slick-loading .slick-slide
 {
-    visibility: block;
+    visibility: hidden;
 }
 .slick-vertical .slick-slide
 {
     display: block;
 
-    height: 50%;
+    height: auto;
 
     border: 1px solid transparent;
 }

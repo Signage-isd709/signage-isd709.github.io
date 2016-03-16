@@ -39,8 +39,8 @@
 					var description = item.description;
 					var location = item.location;
 					var eventDate = formatDate(eventdate, defaults.dateFormat.trim());
-					s ='<div class="eventtitle">'+ summary +'</div>';
-					s +='<div class="eventdate"> When: '+ eventDate +'</div>';
+					s ='<time datetime="item.start.date" class="icon"><em>eventdate[3]</em><strong>eventdate[1]</strong><span>eventdate[2]</span></time><div class="eventtitle">'+ summary +'</div>';
+					s +='<div class="eventdate"> When: '+ eventDate[0]; +'</div>';
 					if(location) {
 						s +='<div class="location">Where: '+ location +'</div>';
 					}
@@ -106,6 +106,9 @@
       var dayNum = parseInt(arrDate[3]);
 
       var d = new Date(year, month - 1, dayNum);
+      var monthCal = calendar.months.full[month];
+      var daynumCal = dayNum;
+      var dayCal = calendar.days.full[d.getDay()];
 
       switch (strFormat) {
         case 'ShortTime':
@@ -140,7 +143,7 @@
             month] + ' ' + dayNum + ', ' + year + ' ' + time;
       }
 
-      return fd;
+      return [fd, monthCal, daynumCal, dayCal]; 
     }
   };
 

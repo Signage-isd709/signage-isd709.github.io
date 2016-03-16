@@ -42,9 +42,9 @@
 					var monthCal = eventDate[1];
 					var dayNumCal = eventDate[2];
 					var dayCal = eventDate[3];
-					//s ='<time datetime= ' + item.start.date + ' class="icon"><em>Monday</em><strong>Febuary</strong><span>20</span></time>';
-					s ='<time datetime= ' + item.start.date + ' class="icon"><em>' + dayCal + '</em><strong>' + monthCal + '</strong><span>' + dayNumCal + '</span></time>';
-					//<br><div class="eventtitle">'+ summary +'</div>
+					var calIcon;
+					calIcon = '<time datetime= ' + item.start.date + ' class="icon"><em>' + dayCal + '</em><strong>' + monthCal + '</strong><span>' + dayNumCal + '</span></time>';
+					s = '<div class="eventtitle">'+ summary +'</div>';
 					//s +='<div class="eventdate"> When: '+ eventDate[0]; +'</div>';
 					if(location) {
 						s +='<div class="location">Where: '+ location +'</div>';
@@ -52,7 +52,7 @@
 					if(description) {
 						s +='<div class="description">'+ description +'</div>';
 					}
-					$($div).append('<div name="eventWrapper">' + s + '</div>');
+					$($div).append('<div name="eventWrapper"><div name="eventIcon" align="left">' + calIcon + '</div><div name="eventInfo">' + s + '</div>');
         });
       },
       error: function(xhr, status) {

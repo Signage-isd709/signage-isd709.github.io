@@ -8,7 +8,7 @@
         apiKey: 'AIzaSyCHhi-u9BPj-jFIqLVw4VKpzZUzeriG1ow',
         dateFormat: 'LongDate',
         errorMsg: 'No events in calendar',
-        maxEvents: 15,
+        maxEvents: 50,
         futureEventsOnly: true,
         sortDescending: true
       },

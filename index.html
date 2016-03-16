@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The web site of isd709signage</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script src="js/calendar.js" type="text/javascript"></script>
+<script type="text/javascript">
+   jQuery(function ($) {
+       $('#eventlist').gCalReader({
+         calendarId:'web.printshop@isd709.org',
+         apiKey:'AIzaSyCHhi-u9BPj-jFIqLVw4VKpzZUzeriG1ow',
+         sortDescending: false
+        });
+	 });
+</script>
+  </head>
+  <body>
+<div class="sl-block" style="min-width: 30px; min-height: 30px; width: 705px; height: 700px; left: 0px; top: 0px;" data-block-type="iframe" data-block-id="92433e6028bb86a4d2aede1a356593d3">
+    <div class="sl-block-content" style="z-index: 11; border-width: 1px;">
+        <iframe allowfullscreen="" data-src="https://docs.google.com/presentation/embed?id=1bG8dHatohJiE3AIyzSMJ0gdWtRNz8JG987e620VGyCE&amp;start=true&amp;loop=true&amp;rm=minimal&amp;delayms=3000" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock" mozallowfullscreen="" webkitallowfullscreen="" src="https://docs.google.com/presentation/embed?id=1bG8dHatohJiE3AIyzSMJ0gdWtRNz8JG987e620VGyCE&amp;start=true&amp;loop=true&amp;rm=minimal&amp;delayms=3000"></iframe>
+    </div>
+</div>
+<div id="sidebar" style="position:absolute; right:0; top:0; bottom:0; width:250px; border:#E3B73C solid thin">
+    <img width="250px" height="86px" src="https://s3.amazonaws.com/media-p.slid.es/uploads/468059/images/2340866/ISD_709_logo.png"/>
+    <div id="sidebar_contents" style="background:#e3b73c; padding-top:5px;">
+        <iframe allowfullscreen="" width="250px" height="55px" data-src="https://freesecure.timeanddate.com/clock/i53vq5na/n3716/fn10/fs24/fc333/tct/pct/tt0/tw1/tb4" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock" mozallowfullscreen="" webkitallowfullscreen="" src="https://freesecure.timeanddate.com/clock/i53vq5na/n3716/fn10/fs24/fc333/tct/pct/tt0/tw1/tb4"></iframe>
+        <div id="outerforecast" style="border-style:solid; border-width:2px; border-color:transparent; border-top-color:#444444; border-bottom-color:#444444; width:100%; margin:0px auto; height:245px;">
+            <iframe id="forecast_embed" style="width:250px; max-width:260px;" type="text/html" frameborder="0" height="245px" data-src="https://forecast.io/embed/#lat=46.786672&amp;lon=-92.100485&amp;name=Duluth&amp;color=#444444&amp;font=Georgia" src="https://forecast.io/embed/#lat=46.786672&amp;lon=-92.100485&amp;name=Duluth&amp;color=#444444&amp;font=Georgia"></iframe>
+        </div>
+        <div>
+       <ul id="eventlist"></ul>
+        </div>
+    </div>
+    </div>
+    <br>
+  </body>
+</html>

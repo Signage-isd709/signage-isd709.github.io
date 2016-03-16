@@ -70,6 +70,12 @@ time.icon span
   padding-top: 1em;
   color: #2f2f2f;
 }
+html,body        {height:100%;}
+.wrapper         {width:80%;height:100%;margin:0 auto;background:#CCC}
+.h_iframe        {position:relative;}
+.h_iframe .ratio {display:block;width:100%;height:auto;}
+.h_iframe iframe {position:absolute;top:0;left:0;width:100%; height:100%;}
+
 </style>
 <link rel="stylesheet" type="text/css" href="css/weatherStyle.css">
 <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
@@ -115,7 +121,12 @@ window.onload = function() {
 </script>
   </head>
   <body background="signage_background.png">
+  	<div class="wrapper">
+        <div class="h_iframe">
+        <img class="ratio" src="http://placehold.it/1024x768 "/>
         <iframe src="https://docs.google.com/presentation/embed?id=1bG8dHatohJiE3AIyzSMJ0gdWtRNz8JG987e620VGyCE&amp;start=true&amp;loop=true&amp;rm=minimal&amp;delayms=3000" style="position: absolute; left:70px; height: 98%; width: 67%; border: none"></iframe>
+        </div>
+        </div>
 <div id="sidebar" style="z-index: 99999; position:absolute; right: 10px; top:0; bottom:0; width:20%; overflow:hidden; border:#E3B73C solid thin; border-radius:25px; box-shadow: -10px 10px 5px #000000; display:none;" height="99%">
     <img width="100%" height="15%" src="https://s3.amazonaws.com/media-p.slid.es/uploads/468059/images/2340866/ISD_709_logo.png"/>
     <div id="sidebar_contents" style="background:#e3b73c; padding-top:5px; overflow:hidden; width:100%; z-index: 99998;">

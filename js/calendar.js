@@ -47,7 +47,7 @@
 					if(description) {
 						s +='<div class="description">'+ description +'</div>';
 					}
-					$($div).append('<li>' + s + '</li>');
+					$($div).append('<div name="eventWrapper">' + s + '</div>');
         });
       },
       error: function(xhr, status) {

@@ -93,13 +93,13 @@ time.icon span
     
 <script type="text/javascript">
    head.ready("jquery.min.js", function ($) {
-       head.ready("calendar.js", $('#eventlist').gCalReader({
+       head.ready("calendar.js", ('#eventlist').gCalReader({
          calendarId:'web.printshop@isd709.org',
          apiKey:'AIzaSyCHhi-u9BPj-jFIqLVw4VKpzZUzeriG1ow',
          sortDescending: false
         }));
 	 });
-head.ready(document,$(function() {
+head.ready(document, function() {
   $.simpleWeather({
     location: 'Duluth, MN',
     woeid: '',
@@ -116,7 +116,7 @@ head.ready(document,$(function() {
       $("#weather").html('<p>'+error+'</p>');
     }
   });
-}));
+});
 
 window.onload = function() { 
  $("#sidebar").toggle( "slide" );

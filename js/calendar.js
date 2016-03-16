@@ -36,6 +36,7 @@
           var summary = item.summary || '';
 					var description = item.description;
 					var location = item.location;
+					console.log(eventDate);
 					var eventDate = formatDate(eventdate, defaults.dateFormat.trim());
 					s ='<div class="eventtitle">'+ summary +'</div>';
 					s +='<div class="eventdate"> When: '+ eventDate +'</div>';

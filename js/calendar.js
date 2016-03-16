@@ -154,5 +154,11 @@
       return [fd, monthCal, daynumCal, dayCal]; 
     }
   };
+  $('.CalEvents').slick({
+    slidesToShow: 3,
+    vertical: true,
+    autoplay: true,
+    arrows: false
+  });
 
 }(jQuery));

@@ -68,7 +68,7 @@ time.icon span
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/calendar.js" type="text/javascript"></script>
     <script src="js/jquery.simpleWeather.js" type="text/javascript"></script>
-    <script src="js/time.js" type="text/javascript"></script>
+    <script src="js/cycle.js" type="text/javascript"></script>
 <script type="text/javascript">
    jQuery(function ($) {
        $('#eventlist').gCalReader({
@@ -94,6 +94,10 @@ $(document).ready(function() {
       $("#weather").html('<p>'+error+'</p>');
     }
   });
+});
+$('#eventlist').cycle({ 
+    fx:      'turnDown', 
+    delay:   -4000 
 });
 </script>
   </head>

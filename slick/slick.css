@@ -57,6 +57,7 @@
     left: 0;
 
     display: block;
+    overflow: hidden;
 }
 .slick-track:before,
 .slick-track:after

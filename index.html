@@ -71,6 +71,32 @@ time.icon span
     <script src="js/cycle.js" type="text/javascript"></script>
 <script type="text/javascript">
    jQuery(function ($) {
+   	    $.fn.rotator = function(settings) {
+        settings = jQuery.extend({
+            interval: 3000,
+            speed: 1000
+        }, settings);
+
+        return this.each(function() {
+            var $t = $(this),
+                $item = $t.children().addClass('item').hide();
+
+            $t.addClass('rotator');
+
+            if ($item.length > 1) {
+                $item.first().addClass('current').fadeIn(settings.speed);
+                setInterval(function() {
+                    var c = $t.find('.current');
+                    if (c.next().length === 0) {
+                        c.removeClass('current').fadeOut(settings.speed);
+                        $item.first().addClass('current').fadeIn(settings.speed);
+                    } else {
+                        c.removeClass('current').fadeOut(settings.speed).next().addClass('current').fadeIn(settings.speed);
+                    }
+                }, settings.interval);
+            }
+        });
+    };
        $('#eventlist').gCalReader({
          calendarId:'web.printshop@isd709.org',
          apiKey:'AIzaSyCHhi-u9BPj-jFIqLVw4VKpzZUzeriG1ow',
@@ -97,9 +123,7 @@ $(document).ready(function() {
 });
 window.onload = function() { 
  $("#sidebar").toggle( "slide" );
- setTimeout(function(){
- $('#eventlist').jshowoff({links: false, controls: false});
- }, 5000);
+ $("#eventlist").rotator();
 };
 </script>
   </head>

@@ -92,7 +92,7 @@ time.icon span
     height: 100%;
     z-index: -1;
     
-    background-image: url(signage_background.png);
+    background-image: url(../img/signage_background.png);
 }
 #blur-layer {
     background:rgba(255,255,255, 0.1);

@@ -110,15 +110,14 @@ head.ready(function() {
 window.onload = function() { 
  $("#sidebar").toggle( "slide" );
  $('.CalEvents').slick({
-    slidesToShow: 7,
+    slidesToShow: 6,
     vertical: true,
     autoplay: true,
     arrows: false,
     lazyLoad: 'progressive',
     infinite: true,
-    respondTo: window,
-    adaptiveHeight: true,
-    cssEase: 'ease'
+    cssEase: 'ease',
+    variableWidth: true
   });
 }
 </script>

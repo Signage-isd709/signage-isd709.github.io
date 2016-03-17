@@ -75,6 +75,16 @@ html,body        {height:98%;}
 .h_iframe        {position:relative;}
 .h_iframe .ratio {display:block;width:100%;height:auto;}
 .h_iframe iframe {position:absolute;top:0;left:0;width:100%; height:100%;}
+#sidebar-blur:before {
+    content: '';
+    
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    z-index: -1;
+    
+    background-image: url(signage_background.png);
+}
 #sidebar-blur {
 -webkit-filter: blur(10px);
 	filter: blur(10px);
@@ -126,7 +136,7 @@ window.onload = function() {
 }
 </script>
   </head>
-  <body background="signage_background.png">
+  <body background="">
   	<div class="wrapper">
         <div class="h_iframe">
         <img class="ratio" src="http://placehold.it/1303x978"/>
@@ -140,7 +150,7 @@ window.onload = function() {
         <div id="weather" style="width:auto; border-radius:25px;"></div>
        <div id="eventlist" style="width: auto; overflow:hidden;" class="CalEvents" width="100%" height="25%"></div>
        </div>
-    <div id="sidebar-blur" style="width:auto; height:100%; overflow:hidden;"></div>
        </div>
+     <div id="sidebar-blur" style="width:300px; height:100%; overflow:hidden;"></div>
   </body>
 </html>

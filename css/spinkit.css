@@ -217,7 +217,8 @@
   width: 46px;
   height: 144px;
   margin: 40px auto;
-  background-color: #333;
+  background: url(../img/dpsLoader.png);
+  /*background-color: #333;*/
   border-radius: 100%;
   -webkit-animation: sk-pulseScaleOut 1s infinite ease-in-out;
           animation: sk-pulseScaleOut 1s infinite ease-in-out; }

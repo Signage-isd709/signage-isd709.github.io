@@ -496,8 +496,8 @@
  *
  */
 .sk-cube-grid {
-  width: 46px;
-  height: 144px;
+  width: 40px;
+  height: 40px;
   margin: 40px auto;
   /*
    * Spinner positions
@@ -699,8 +699,8 @@
  */
 .sk-folding-cube {
   margin: 40px auto;
-  width: 46px;
-  height: 144px;
+  width: 40px;
+  height: 40px;
   position: relative;
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg); }

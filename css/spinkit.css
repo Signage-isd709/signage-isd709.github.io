@@ -6,9 +6,9 @@
  *
  */
 .sk-rotating-plane {
-  width: 100px;
-  height: 100px;
-  background-color: #444444;
+  width: 46px;
+  height: 144px;
+  background: url(../img/dpsLoader.png);
   margin: 90px auto;
   -webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
           animation: sk-rotatePlane 1.2s infinite ease-in-out; }

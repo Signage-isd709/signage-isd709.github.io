@@ -23,7 +23,7 @@
 .slick-list
 {
     position: fixed;
-
+    height:50%;
     display: block;
     overflow: hidden;
 

@@ -110,7 +110,8 @@ time.icon span
 position:fixed; 
 right: 10px; top:0; bottom:0; width:300px; 
 overflow:hidden; 
-background: transparent; 
+background: transparent;
+background: #fff;
 border:#E3B73C solid thin; 
 border-radius:25px; 
 box-shadow: -10px 10px 5px #000000; 

@@ -103,6 +103,7 @@ z-index: 99999;
     z-index: -1;
     
     background-image: url(../img/signage_background.png);
+    background-position: left;
 }
 #blur-layer {
     background:rgba(255,255,255, 0.1);

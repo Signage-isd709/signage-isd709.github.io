@@ -91,6 +91,7 @@ body.pg-loading {
 /* line 86, ../src/please-wait.scss */
 .pg-loading-screen .pg-loading-logo-header img {
   display: inline-block !important;
+  width: 29%;
 }
 /* line 91, ../src/please-wait.scss */
 .pg-loading-screen .pg-loading-html {

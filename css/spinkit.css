@@ -702,7 +702,6 @@
   margin: 40px auto;
   width: 46px;
   height: 144px;
-  background: url(../img/dpsLoader.png);
   position: relative;
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg); }
@@ -710,6 +709,7 @@
     float: left;
     width: 50%;
     height: 50%;
+    background: url(../img/dpsLoader.png);
     position: relative;
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);

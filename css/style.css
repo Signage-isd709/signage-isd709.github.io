@@ -84,7 +84,7 @@ time.icon span
   color: #2f2f2f;
 }
 
-#sidebar-blur:before {
+/*#sidebar-blur:before {
     content: '';
     
     position: absolute;
@@ -105,4 +105,14 @@ time.icon span
 #sidebar-blur {
 -webkit-filter: blur(10px);
 	filter: blur(10px);
+}*/
+.sidebarBlur {
+position:fixed; 
+right: 10px; top:0; bottom:0; width:300px; 
+overflow:hidden; 
+background: transparent; 
+border:#E3B73C solid thin; 
+border-radius:25px; 
+box-shadow: -10px 10px 5px #000000; 
+z-index: 99999;
 }

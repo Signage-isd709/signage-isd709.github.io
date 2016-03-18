@@ -13,12 +13,15 @@ body.pg-loading {
   top: 0;
   z-index: 1000000;
   opacity: 1;
-  background-color: #FFF;
-  -webkit-transition: background-color 0.4s ease-in-out 0s;
-  -moz-transition: background-color 0.4s ease-in-out 0s;
-  -ms-transition: background-color 0.4s ease-in-out 0s;
-  -o-transition: background-color 0.4s ease-in-out 0s;
-  transition: background-color 0.4s ease-in-out 0s;
+  /*background-color: #FFF;*/
+  background: #ff4b1f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ff4b1f , #1fddff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ff4b1f , #1fddff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-transition: background 0.4s ease-in-out 0s;
+  -moz-transition: background 0.4s ease-in-out 0s;
+  -ms-transition: background 0.4s ease-in-out 0s;
+  -o-transition: background 0.4s ease-in-out 0s;
+  transition: background 0.4s ease-in-out 0s;
 }
 /* line 32, ../src/please-wait.scss */
 .pg-loading-screen.pg-loaded {

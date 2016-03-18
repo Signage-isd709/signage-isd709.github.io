@@ -37,6 +37,7 @@ html, body {
 	/*z-index:99999;*/
 }
 .item.last {
+  background: url(../signage_background_blur.png) no-repeat;
   margin-right: 0;
   width:350px;
 }

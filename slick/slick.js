@@ -505,7 +505,7 @@
 
         _.$slideTrack = (_.slideCount === 0) ?
             $('<div class="slick-track"/>').appendTo(_.$slider) :
-            _.$slides.wrapAll('<div class="slick-track"/>').parent();
+            _.$slides.wrapAll('<div class="slick-track" style="height:100%;"/>').parent();
 
         _.$list = _.$slideTrack.wrap(
             '<div aria-live="polite" class="slick-list"/>').parent();

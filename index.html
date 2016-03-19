@@ -92,7 +92,7 @@ head.ready(function() {
     woeid: '',
     unit: 'f',
     success: function(weather) {
-      html = '<div id="current" style="float:left;"><h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2><br><h3 style=color:white;">'+weather.city+', '+weather.region+'</h3></div><div id="currentIcon" style="float:right;"><h2><i class="icon-'+weather.code+'"></i></h2></div>';
+      html = '<div id="current"><h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2><br><h3 style=color:white;">'+weather.city+', '+weather.region+'</h3></div><div id="currentIcon" style="float:right;"><h2><i class="icon-'+weather.code+'"></i></h2></div>';
       html += '<ul>';
       html += '<li class="currently">'+weather.currently+'</li>';
       html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li>';

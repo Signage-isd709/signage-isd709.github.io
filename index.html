@@ -96,8 +96,8 @@ head.ready(function() {
       html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
       html += '<li class="currently">'+weather.currently+'</li>';
       html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li>';
-      html += '<li>High<br>'+weather.high+'</li>';
-      html += '<li>Low<br>'+weather.low+'</li></ul>';
+      html += '<li>High'+weather.high+'&#8457;</li>';
+      html += '<li>Low'+weather.low+'&#8457;</li></ul>';
   
       $("#weather").html(html);
     },

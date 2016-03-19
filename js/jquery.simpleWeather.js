@@ -76,7 +76,7 @@
 	    var WC = 24;
 			
 			if (WC == 23 || WC == 24 || WC == 25 || WC == 32 || WC == 34 || WC == 36) {
-				document.getElementById("weather").style.background = "url(../img/weatherback.jpg)";
+				document.getElementById("weather").style.background = "url(../img/weatherback.png)";
 				document.getElementById("weather").style.backgroundRepeat = "no-repeat";
 			}
 			else if (WC == 5 || WC == 7 || WC == 13 || WC == 14 || WC == 15 || WC == 16 || WC == 41 || WC == 42 || WC == 43 || WC == 46) {

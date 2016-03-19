@@ -92,7 +92,7 @@ head.ready(function() {
     woeid: '',
     unit: 'f',
     success: function(weather) {
-      html = '<div id="current" style="float:left;"><h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2><br><h3>'+weather.city+', '+weather.region+'</h3></div><div id="currentIcon" style="float:right;"><h2><i class="icon-'+weather.code+'"></i></h2></div>';
+      html = '<div id="current" style="float:left;"><h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2><br><h3 style=color:white;">'+weather.city+', '+weather.region+'</h3></div><div id="currentIcon" style="float:right;"><h2><i class="icon-'+weather.code+'"></i></h2></div>';
       html += '<ul>';
       html += '<li class="currently">'+weather.currently+'</li>';
       html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li>';
@@ -143,7 +143,7 @@ setTimeout(function(){ loading_screen.finish();}, 10000);
       <div class="item last"><div class="item-overlay"><img width="100%" src="img/isd_709_logo.png" style="padding-top:5px;"/>
     <div id="sidebar_contents" style="padding-top:5px; overflow:hidden; width:auto; height:100%; z-index: 99998;">
      <center><iframe allowfullscreen="" width="auto" height="70px" frameborder="0" src="https://freesecure.timeanddate.com/clock/i53vq5na/n3716/fn10/fs24/fc333/tct/pct/tt0/tw1/tb4"></iframe></center>
-        <div id="weather" style="width:auto; border-radius:25px;"></div>
+        <div id="weather" style="width:300px; border-radius:25px;"></div>
        <div id="eventlist" style="width: auto; overflow:hidden;" class="CalEvents" width="100%" height="100%"></div>
        </div></div></div>
        <div class="item" style="float:left;width:1200px; height:900px; position:absolute; margin-top:5%; margin-left:9%;"><div class="item-overlay"> <iframe src="https://docs.google.com/presentation/embed?id=1bG8dHatohJiE3AIyzSMJ0gdWtRNz8JG987e620VGyCE&amp;start=true&amp;loop=true&amp;rm=minimal&amp;delayms=3000" frameborder="0"style="width:100%; height:100%;"></iframe></div></div>

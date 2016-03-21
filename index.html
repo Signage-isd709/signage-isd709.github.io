@@ -131,7 +131,7 @@ head.ready(function() {
 	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>';
 	}
 	else if (weather.code == 26 || weather.code == 28) {
-	$("#weatherIcon").html('<div class="cloud"></div><div class="sun"><div class="rays"></div></div>');
+	$("#weatherIcon").html('<div class="cloud"></div><div class="sun"><div class="rays"></div></div><div>' + weather.currently + '</div>);
 	};
 	console.log(weather.code);
     },

@@ -101,7 +101,7 @@ head.ready(function() {
   
       $("#weather").html(html);
       if (weather.code == 23 || weather.code == 24 || weather.code == 25 || weather.code == 32 || weather.code == 34 || weather.code == 36) {
-	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>'
+	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>';
 	}
 	else if (weather.code == 5 || weather.code == 7 || weather.code == 13 || weather.code == 14 || weather.code == 15 || weather.code == 16 || weather.code == 41 || weather.code == 42 || weather.code == 43 || weather.code == 46) {
 	document.getElementById("weather").style.background = "url(../img/winterback.jpg)";
@@ -112,8 +112,7 @@ head.ready(function() {
 	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
 	}
 	else if (weather.code == 30 || weather.code == 44) {
-	document.getElementById("weather").style.background = "url(../img/partlycloudyback.jpg)";
-	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	document.getElementById("weatherIcon").innerHtml = '  <div class="cloud"></div><div class="sun"><div class="rays"></div></div>';
 	}
 	else if (weather.code == 27 || weather.code == 29) {
 	document.getElementById("weather").style.background = "url(../img/nightcloudyback.jpg)";

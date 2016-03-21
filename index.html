@@ -94,10 +94,10 @@ head.ready(function() {
     success: function(weather) {
       html = '<div id="weatherIcon" class="icon"></div><div id="current"><h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2><br><h3 style=color:white;">'+weather.city+', '+weather.region+'</h3></div><div id="currentIcon"></div>';
       html += '<ul>';
-      html += '<li class="currently">'+weather.currently+'</li>';
-      html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li>';
-      html += '<li>High'+weather.high+'&#8457;</li>';
-      html += '<li>Low'+weather.low+'&#8457;</li></ul>';
+      html += '<li>'+weather.currently+'</li><hr>';
+      html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li><hr>';
+      html += '<li>High'+weather.high+'&#8457;</li><hr>';
+      html += '<li>Low'+weather.low+'&#8457;</li><hr></ul>';
   
       $("#weather").html(html);
       if (weather.code == 23 || weather.code == 24 || weather.code == 25 || weather.code == 32 || weather.code == 34 || weather.code == 36) {

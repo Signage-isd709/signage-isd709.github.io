@@ -146,10 +146,13 @@ window.onload = function() {
  //$("#sidebar").toggle( "slide" );
  //$("#sidebar-blur").toggle( "slide" );
  $('.CalEvents').bxSlider({
-    slideWidth: 200,
+    slideWidth: 350,
     minSlides: 2,
     maxSlides: 3,
     slideMargin: 10
+    mode: vertical
+    infiniteLoop: true;
+    responsive: true;
   });
 }
  /*$('.CalEvents').slick({

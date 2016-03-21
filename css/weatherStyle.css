@@ -1,12 +1,8 @@
 @charset "UTF-8";
 /* CSS Document */
 @font-face {
-    font-family: 'weather';
-    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot');
-    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
-         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'),
-         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'),
-         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
+    font-family: 'robato';
+    src: url('../font/RobotoSlab-Light.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -20,7 +16,6 @@
 
 i {
   color: #fff;
-  font-family: weather;
   font-size: 100px;
   font-weight: normal;
   font-style: normal;
@@ -80,10 +75,15 @@ i {
 #weather h2 {
   margin: 0 0 8px;
   color: #fff;
+  font-family: robato;
   font-size: 50px;
   font-weight: 200;
   text-align: center;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+#weather h3 {
+  font-family: robato;
+  color: #fff;
 }
 
 #weather ul {

@@ -147,12 +147,15 @@ window.onload = function() {
  //$("#sidebar-blur").toggle( "slide" );
  $('.CalEvents').bxSlider({
     slideWidth: 350,
-    minSlides: 2,
-    maxSlides: 3,
+    minSlides: 5,
+    maxSlides: 5,
     slideMargin: 10,
     mode: 'vertical',
     infiniteLoop: true,
-    responsive: true
+    responsive: true,
+    controls: false,
+    auto: true,
+    ticker: false
   });
 }
  /*$('.CalEvents').slick({

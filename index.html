@@ -101,11 +101,55 @@ head.ready(function() {
   
       $("#weather").html(html);
     },
+    if (WC == 23 || WC == 24 || WC == 25 || WC == 32 || WC == 34 || WC == 36) {
+	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>'
+	}
+	else if (WC == 5 || WC == 7 || WC == 13 || WC == 14 || WC == 15 || WC == 16 || WC == 41 || WC == 42 || WC == 43 || WC == 46) {
+	document.getElementById("weather").style.background = "url(../img/winterback.jpg)";
+	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	}
+	else if (WC == 0 || WC == 1 || WC == 2 || WC == 3 || WC == 4 || WC == 17 || WC == 37 || WC == 38 || WC == 39 || WC == 45 || WC == 47) {
+	document.getElementById("weather").style.background = "url(../img/stormback.jpg)";
+	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	}
+	else if (WC == 30 || WC == 44) {
+	document.getElementById("weather").style.background = "url(../img/partlycloudyback.jpg)";
+	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	}
+	else if (WC == 27 || WC == 29) {
+	document.getElementById("weather").style.background = "url(../img/nightcloudyback.jpg)";
+	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	}
+	else if (WC == 31 || WC == 33) {
+	document.getElementById("weather").style.background = "url(../img/nightclearback.jpg)";
+	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	}
+	else if (WC == 8 || WC == 10) {
+	document.getElementById("weather").style.background = "url(../img/iceback.jpg)";
+	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	}
+	else if (WC == 6 || WC == 11 || WC == 12 || WC == 18 || WC == 35 || WC == 40) {
+	document.getElementById("weather").style.background = "url(../img/heavyrainback.jpg)";
+	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	}
+	else if (WC == 19 || WC == 20 || WC == 21 || WC == 22) {
+	document.getElementById("weather").style.background = "url(../img/fogback.jpg)";
+	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	}
+	else if (WC == 9) {
+	document.getElementById("weather").style.background = "url(../img/drizzleback.jpg)";
+	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	}
+	else if (WC == 26 || WC == 28) {
+	document.getElementById("weather").style.background = "url(../img/cloudyback.jpg)";
+	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	};
     error: function(error) {
       $("#weather").html('<p>'+error+'</p>');
     }
   });
 });
+
 
 window.onload = function() { 
  //$("#sidebar").toggle( "slide" );

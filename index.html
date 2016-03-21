@@ -92,8 +92,8 @@ head.ready(function() {
     woeid: '',
     unit: 'f',
     success: function(weather) {
-      html = '<div id="weatherIcon" class="icon" style="float:center;"></div><div id="current" style="float:left;"><h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2><br><h3 style=color:white;">'+weather.city+', '+weather.region+'</h3></div><div id="currentIcon" style="float:right;"></div>';
-      /*html += '<ul>';
+      html = '<div id="weatherIcon" class="icon"></div><div id="current"><h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2><br><h3 style=color:white;">'+weather.city+', '+weather.region+'</h3></div><div id="currentIcon"></div>';
+      html += '<ul>';
       html += '<li class="currently">'+weather.currently+'</li>';
       html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li>';
       html += '<li>High'+weather.high+'&#8457;</li>';

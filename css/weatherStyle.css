@@ -13,8 +13,6 @@
 
 #weather {
   width: 100%;
-  background: url(../img/weatherback.jpg) no-repeat;
-  background-size:cover;
   margin: 0px auto;
   text-align: center;
   text-transform: uppercase;
@@ -94,12 +92,10 @@ i {
 }
 
 #weather li {
-  background: #fff;
-  background: rgba(255,255,255,0.90);
-  margin-bottom: 50px;
-  padding: 10px;
   display: inline-block;
-  border-radius: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: black;
 }
 
 #weather .currently {

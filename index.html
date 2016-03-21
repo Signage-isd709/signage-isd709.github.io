@@ -100,46 +100,46 @@ head.ready(function() {
       html += '<li>Low'+weather.low+'&#8457;</li></ul>';*/
   
       $("#weather").html(html);
-      if (WC == 23 || WC == 24 || WC == 25 || WC == 32 || WC == 34 || WC == 36) {
+      if (weather.code == 23 || weather.code == 24 || weather.code == 25 || weather.code == 32 || weather.code == 34 || weather.code == 36) {
 	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>'
 	}
-	else if (WC == 5 || WC == 7 || WC == 13 || WC == 14 || WC == 15 || WC == 16 || WC == 41 || WC == 42 || WC == 43 || WC == 46) {
+	else if (weather.code == 5 || weather.code == 7 || weather.code == 13 || weather.code == 14 || weather.code == 15 || weather.code == 16 || weather.code == 41 || weather.code == 42 || weather.code == 43 || weather.code == 46) {
 	document.getElementById("weather").style.background = "url(../img/winterback.jpg)";
 	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
 	}
-	else if (WC == 0 || WC == 1 || WC == 2 || WC == 3 || WC == 4 || WC == 17 || WC == 37 || WC == 38 || WC == 39 || WC == 45 || WC == 47) {
+	else if (weather.code == 0 || weather.code == 1 || weather.code == 2 || weather.code == 3 || weather.code == 4 || weather.code == 17 || weather.code == 37 || weather.code == 38 || weather.code == 39 || weather.code == 45 || weather.code == 47) {
 	document.getElementById("weather").style.background = "url(../img/stormback.jpg)";
 	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
 	}
-	else if (WC == 30 || WC == 44) {
+	else if (weather.code == 30 || weather.code == 44) {
 	document.getElementById("weather").style.background = "url(../img/partlycloudyback.jpg)";
 	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
 	}
-	else if (WC == 27 || WC == 29) {
+	else if (weather.code == 27 || weather.code == 29) {
 	document.getElementById("weather").style.background = "url(../img/nightcloudyback.jpg)";
 	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
 	}
-	else if (WC == 31 || WC == 33) {
+	else if (weather.code == 31 || weather.code == 33) {
 	document.getElementById("weather").style.background = "url(../img/nightclearback.jpg)";
 	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
 	}
-	else if (WC == 8 || WC == 10) {
+	else if (weather.code == 8 || weather.code == 10) {
 	document.getElementById("weather").style.background = "url(../img/iceback.jpg)";
 	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
 	}
-	else if (WC == 6 || WC == 11 || WC == 12 || WC == 18 || WC == 35 || WC == 40) {
+	else if (weather.code == 6 || weather.code == 11 || weather.code == 12 || weather.code == 18 || weather.code == 35 || weather.code == 40) {
 	document.getElementById("weather").style.background = "url(../img/heavyrainback.jpg)";
 	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
 	}
-	else if (WC == 19 || WC == 20 || WC == 21 || WC == 22) {
+	else if (weather.code == 19 || weather.code == 20 || weather.code == 21 || weather.code == 22) {
 	document.getElementById("weather").style.background = "url(../img/fogback.jpg)";
 	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
 	}
-	else if (WC == 9) {
+	else if (weather.code == 9) {
 	document.getElementById("weather").style.background = "url(../img/drizzleback.jpg)";
 	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
 	}
-	else if (WC == 26 || WC == 28) {
+	else if (weather.code == 26 || weather.code == 28) {
 	document.getElementById("weather").style.background = "url(../img/cloudyback.jpg)";
 	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
 	};

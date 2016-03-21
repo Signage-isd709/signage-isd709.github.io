@@ -104,43 +104,34 @@ head.ready(function() {
 	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>';
 	}
 	else if (weather.code == 5 || weather.code == 7 || weather.code == 13 || weather.code == 14 || weather.code == 15 || weather.code == 16 || weather.code == 41 || weather.code == 42 || weather.code == 43 || weather.code == 46) {
-	document.getElementById("weather").style.background = "url(../img/winterback.jpg)";
-	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>';
 	}
 	else if (weather.code == 0 || weather.code == 1 || weather.code == 2 || weather.code == 3 || weather.code == 4 || weather.code == 17 || weather.code == 37 || weather.code == 38 || weather.code == 39 || weather.code == 45 || weather.code == 47) {
-	document.getElementById("weather").style.background = "url(../img/stormback.jpg)";
-	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>';
 	}
 	else if (weather.code == 30 || weather.code == 44) {
 	$("div.icon").html = '<div class="cloud"></div><div class="sun"><div class="rays"></div></div>';
 	}
 	else if (weather.code == 27 || weather.code == 29) {
-	document.getElementById("weather").style.background = "url(../img/nightcloudyback.jpg)";
-	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>';
 	}
 	else if (weather.code == 31 || weather.code == 33) {
-	document.getElementById("weather").style.background = "url(../img/nightclearback.jpg)";
-	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>';
 	}
 	else if (weather.code == 8 || weather.code == 10) {
-	document.getElementById("weather").style.background = "url(../img/iceback.jpg)";
-	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>';
 	}
 	else if (weather.code == 6 || weather.code == 11 || weather.code == 12 || weather.code == 18 || weather.code == 35 || weather.code == 40) {
-	document.getElementById("weather").style.background = "url(../img/heavyrainback.jpg)";
-	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>';
 	}
 	else if (weather.code == 19 || weather.code == 20 || weather.code == 21 || weather.code == 22) {
-	document.getElementById("weather").style.background = "url(../img/fogback.jpg)";
-	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>';
 	}
 	else if (weather.code == 9) {
-	document.getElementById("weather").style.background = "url(../img/drizzleback.jpg)";
-	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>';
 	}
 	else if (weather.code == 26 || weather.code == 28) {
-	document.getElementById("weather").style.background = "url(../img/cloudyback.jpg)";
-	document.getElementById("weather").style.backgroundRepeat = "no-repeat";
+	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>';
 	};
     },
     error: function(error) {

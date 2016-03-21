@@ -18,6 +18,7 @@
     -ms-touch-action: pan-y;
         touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
 }
 
 .slick-list
@@ -114,6 +115,7 @@
     height: auto;
 
     border: 1px solid transparent;
+    overflow: hidden;
 }
 .slick-arrow.slick-hidden {
     display: none;

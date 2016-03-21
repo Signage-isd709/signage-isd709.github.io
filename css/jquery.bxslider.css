@@ -35,7 +35,7 @@
 	box-shadow: 0 0 5px #ccc;
 	border:  5px solid #fff;
 	left: -5px;
-	background: #fff;
+	background: transparent;
 	
 	/*fix other elements on the page moving (on Chrome)*/
 	-webkit-transform: translatez(0);

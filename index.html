@@ -145,7 +145,13 @@ head.ready(function() {
 window.onload = function() { 
  //$("#sidebar").toggle( "slide" );
  //$("#sidebar-blur").toggle( "slide" );
- $('.CalEvents').slick({
+ $('.CalEvents').bxSlider({
+    slideWidth: 200,
+    minSlides: 2,
+    maxSlides: 3,
+    slideMargin: 10
+  });
+ /*$('.CalEvents').slick({
     slidesToShow: 6,
     vertical: true,
     autoplay: true,
@@ -155,7 +161,7 @@ window.onload = function() {
     cssEase: 'ease',
     draggable: false
   });
-}
+}*/
 </script>
 </head>
 <body>

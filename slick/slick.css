@@ -84,12 +84,10 @@
 
 .slick-slide
 {
-    display: none;
+display: none;
     float: left;
-
-    height: 100%;
+    height: auto;
     min-height: 1px;
-    overflow: hidden;
 }
 [dir='rtl'] .slick-slide
 {

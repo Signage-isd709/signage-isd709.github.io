@@ -146,15 +146,12 @@ window.onload = function() {
  //$("#sidebar").toggle( "slide" );
  //$("#sidebar-blur").toggle( "slide" );
  $('.CalEvents').bxSlider({
-    slideWidth: 350,
-    auto: true,
-    ticker: true,
-    speed: 6000,
-    slideMargin: 10,
-    mode: 'vertical',
-    infiniteLoop: true,
-    responsive: true,
-    controls: false
+  minSlides: 4,
+  maxSlides: 4,
+  slideWidth: 170,
+  slideMargin: 10,
+  ticker: true,
+  speed: 6000
   });
 }
  /*$('.CalEvents').slick({

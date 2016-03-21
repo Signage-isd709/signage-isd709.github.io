@@ -110,7 +110,7 @@ head.ready(function() {
 	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>';
 	}
 	else if (weather.code == 30 || weather.code == 44) {
-	$("div.icon").html('<div class="cloud"></div><div class="sun"><div class="rays"></div></div>');
+	$("#weatherIcon").html('<div class="cloud"></div><div class="sun"><div class="rays"></div></div>');
 	}
 	else if (weather.code == 27 || weather.code == 29) {
 	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>';
@@ -131,7 +131,7 @@ head.ready(function() {
 	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>';
 	}
 	else if (weather.code == 26 || weather.code == 28) {
-	document.getElementById("weatherIcon").innerHtml = '<div class="sun"><div class="rays"></div></div>';
+	$("#weatherIcon").html('<div class="cloud"></div><div class="sun"><div class="rays"></div></div>');
 	};
 	console.log(weather.code);
     },

@@ -75,7 +75,7 @@ i {
 .icon-47:before { content: "S"; }
 
 #weather h2 {
-  margin: 0 0 8px;
+  margin: 0 0 0px;
   color: #fff;
   font-family: robato;
   font-size: 50px;
@@ -86,6 +86,7 @@ i {
 #weather h3 {
   font-family: robato;
   color: #fff;
+  margin: 0px;
 }
 
 #weather ul {

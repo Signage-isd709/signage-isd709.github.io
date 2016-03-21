@@ -1,4 +1,10 @@
 @charset "UTF-8";
+@font-face {
+    font-family: 'robato';
+    src: url('../font/RobotoSlab-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 /*html,body 
 /*{
   /*height:98%;
@@ -9,6 +15,8 @@ html, body {
     /*height: 100%;*/
     padding: 0;
     margin: 0;
+    font-family: robato;
+    color: #fff;
 }
 .projector-container {
     width: 100%;

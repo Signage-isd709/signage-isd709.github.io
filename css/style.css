@@ -148,12 +148,6 @@ time.icon span
 	width: 350px;
 	height: 420px;
 }
-/*All events pulled by calendar.js*/
-#eventlist {
-	width: 100%;
-	overflow: hidden;
-	height: 25%;
-}
 /*Calendar Event Container*/
 #eventWrapper {
 	margin-left: 5px;

@@ -255,11 +255,11 @@
 
 @keyframes cloudwindy {
     0% {
-        left: 80%;
+        left: 100%;
       opacity: .0;
     }
     50% {
-        left: 40%;
+        left: 50%;
         opacity: 1;
     }
   100% {

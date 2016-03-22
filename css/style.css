@@ -71,8 +71,8 @@ html, body {
 
 #timeClock {
 	width:350px;
-	height: 200px;
-	font-size: 24px;
+	height: 60px;
+	font-size: 30px;
 }
 
 time.icon

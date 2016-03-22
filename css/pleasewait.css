@@ -11,6 +11,7 @@
 html, body {
   font-family: robato;
   color: #fff;
+  height: 100%;
 }
 /* line 17, ../src/please-wait.scss */
 body.pg-loading {

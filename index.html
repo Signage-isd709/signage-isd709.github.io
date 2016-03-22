@@ -141,39 +141,57 @@ head.ready(function() {
       html += '<li>Low'+weather.low+'&#8457;</li><hr></ul>';
   
       $("#weather").html(html);
-      if (weather.code == 23 || weather.code == 24 || weather.code == 25 || weather.code == 32 || weather.code == 34 || weather.code == 36) {
-	$("#weatherIcon").html('<div class="cloud"></div><div class="sun"><div class="rays"></div></div>');
+      if (weather.code == 0 || weather.code == 1 || weather.code == 2 || weather.code == 3 || weather.code == 4 || weather.code == 37 || weather.code == 38 || weather.code == 45 || weather.code || 47) {
+	$("#weatherIcon").html('<div class="icon thunder-storm"><div class="cloud" style="z-index:0"></div><div class="lightning" style="background: transparent"><div class="bolt" style="z-index:3; background: transparent"></div><div class="bolt" style="z-index:3; background: transparent"></div></div><div class="rain" style="z-index: 1"></div></div>');
 	}
-	else if (weather.code == 5 || weather.code == 7 || weather.code == 13 || weather.code == 14 || weather.code == 15 || weather.code == 16 || weather.code == 41 || weather.code == 42 || weather.code == 43 || weather.code == 46) {
-	$("#weatherIcon").html('<div class="cloud"></div><div class="sun"><div class="rays"></div></div>');
+	else if (weather.code == 5 || weather.code == 6 || weather.code == 7 || weather.code == 17 || weather.code == 18 || weather.code == 35) {
+	$("#weatherIcon").html('<div class="icon snow-rain"><div class="cloud"></div><div class="snow"><div class="flake"></div><div class="flake"></div></div><div style="background: transparent" class="rain"></div></div>');
 	}
-	else if (weather.code == 0 || weather.code == 1 || weather.code == 2 || weather.code == 3 || weather.code == 4 || weather.code == 17 || weather.code == 37 || weather.code == 38 || weather.code == 39 || weather.code == 45 || weather.code == 47) {
-	$("#weatherIcon").html('<div class="cloud"></div><div class="sun"><div class="rays"></div></div>');
+	else if (weather.code == 13 || weather.code == 14 || weather.code == 15 || weather.code == 16 || weather.code == 41 || weather.code == 42 || weather.code == 43 || weather.code == 46) {
+	$("#weatherIcon").html('<div class="icon flurries"><div class="cloud"></div><div class="snow"><div class="flake"></div><div class="flake"></div></div></div>');
 	}
-	else if (weather.code == 30 || weather.code == 44) {
-	$("#weatherIcon").html('<div class="cloud"></div><div class="sun"><div class="rays"></div></div>');
+	else if (weather.code == 10 || weather.code == 11 || weather.code == 12 || weather.code == 40) {
+	$("#weatherIcon").html('<div class="icon rainy"><div class="cloud"></div><div class="rain"></div></div>');
 	}
-	else if (weather.code == 27 || weather.code == 29) {
-	$("#weatherIcon").html('<div class="cloud"></div><div class="sun"><div class="rays"></div></div>');
+	else if (weather.code == 19 || weather.code == 21 || weather.code == 22) {
+	$("#weatherIcon").html('<div class="hazy" style="width: 12em; height: 9em; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: #fff; border-radius: 5px;"><div style=" width: 12em; height: 8em; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: #fff; border-radius: 5px;"><div class="icon" style="border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: #fff; border-radius: 5px; height: 7em;"><div class="sun"><div class="rays"><div></div></div></div></div>');
+	}
+	else if (weather.code == 32 || weather.code == 34 || weather.code == 36) {
+	$("#weatherIcon").html('<div class="icon sunny"><div class="sun"><div class="rays"></div></div></div>');
+	}
+	else if (weather.code == 8 || weather.code == 9) {
+	$("#weatherIcon").html('<div class="icon drizzle"><div class="rain"></div></div>');
+	}
+	else if (weather.code == 23 || weather.code == 24) {
+	$("#weatherIcon").html('<div class="icon windy"><div class="cloud" style="animation: cloudwindy 2s linear infinite;"></div></div>');
 	}
 	else if (weather.code == 31 || weather.code == 33) {
-	$("#weatherIcon").html('<div class="cloud"></div><div class="sun"><div class="rays"></div></div>');
+	$("#weatherIcon").html('<div class="icon moon"><div class="sun"></div></div>');	
 	}
-	else if (weather.code == 8 || weather.code == 10) {
-	$("#weatherIcon").html('<div class="cloud"></div><div class="sun"><div class="rays"></div></div>');
+	else if (weather.code == 25) {
+	$("#weatherIcon").html('<div class="icon cold"><div class="snow"><div class="flake"></div><div class="flake"></div></div></div>');
 	}
-	else if (weather.code == 6 || weather.code == 11 || weather.code == 12 || weather.code == 18 || weather.code == 35 || weather.code == 40) {
-	$("#weatherIcon").html('<div class="cloud"></div><div class="sun"><div class="rays"></div></div>');
+	else if (weather.code == 20) {
+	$("#weatherIcon").html('<div class="foggy" style="width: 12em; height: 9em; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: #fff; border-radius: 5px;"><div style=" width: 12em; height: 8em; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: #fff; border-radius: 5px;"><div class="icon" style="border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: #fff; border-radius: 5px; height: 7em;"><div class="cloud"></div></div></div></div>');
 	}
-	else if (weather.code == 19 || weather.code == 20 || weather.code == 21 || weather.code == 22) {
-	$("#weatherIcon").html('<div class="cloud"></div><div class="sun"><div class="rays"></div></div>');
-	}
-	else if (weather.code == 9) {
-	$("#weatherIcon").html('<div class="cloud"></div><div class="sun"><div class="rays"></div></div>');
-	}
-	else if (weather.code == 26 || weather.code == 28) {
-	$("#weatherIcon").html('<div class="cloud"></div><div class="sun"><div class="rays"></div></div>');
+	else if (weather.code == 26) {
+	$("#weatherIcon").html('<div class="icon cloudy"><div class="cloud" style="transform: none; animation: cloudwindy 5s linear infinite;"></div><div class="cloud" style="opacity: 0; transform: none; background: #fff; animation: cloudwindy 5s linear infinite; animation-direction: reverse;"></div></div>');
 	};
+	else if (weather.code == 28) {
+	$("#weatherIcon").html('<div class="icon day-most-cloud”><div class="sun"><div class="rays"></div></div><div class="cloud" style="transform: none; animation: cloudwindy 8s linear infinite;"></div><div class="cloud" style="opacity: 0; transform: none; background: #fff; animation: cloudwindy 8s linear infinite; animation-direction: reverse;"></div></div>');	
+	}
+	else if (weather.code == 30) {
+	$("#weatherIcon").html('<div class="icon day-partly-cloudy”><div class="cloud"></div><div class="sun"><div class="rays"></div></div> </div>');	
+	}
+	else if (weather.code == 44) {
+	$("#weatherIcon").html('<div class="icon cloudy"><div class="cloud"></div><div class="cloud"></div></div>');	
+	}
+	else if (weather.code == 27) {
+	$("#weatherIcon").html('<div class="icon most-cloudy-night"><div class="sun"></div><div class="cloud" style="transform: none; animation: cloudwindy 8s linear infinite;"></div><div class="cloud" style="opacity: 0; transform: none; background: #fff; animation: cloudwindy 8s linear infinite; animation-direction: reverse;"></div></div>');	
+	}
+	else if (weather.code == 29) {
+	$("#weatherIcon").html('<div class="icon partly-cloudy-night"><div class="cloud"></div><div class="sun"></div> ');	
+	}
 	console.log(weather.code);
     },
     error: function(error) {

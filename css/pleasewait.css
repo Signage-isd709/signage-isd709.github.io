@@ -1,4 +1,17 @@
 @charset "UTF-8";
+
+/*Font Package*/
+@font-face {
+  font-family: 'robato';
+    src: url('../font/RobotoSlab-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Base */
+html, body {
+  font-family: robato;
+  color: #fff;
+}
 /* line 17, ../src/please-wait.scss */
 body.pg-loading {
   overflow: hidden;

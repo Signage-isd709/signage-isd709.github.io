@@ -1,1 +1,1 @@
-head.load("http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", "js/jquery.bxslider.js", "js/calendar.js", "js/jquery.simpleWeather.js", "css/style.min.css", "css/weatherStyle.css", "css/weatherIcons.css", "css/jquery.bxslider.css");
+head.load("http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", "js/jquery.bxslider.js", "js/calendar.js", "js/jquery.simpleWeather.js", "css/style.min.css", "css/weatherStyle.min.css", "css/weatherIcons.css", "css/bxslider.min.css");

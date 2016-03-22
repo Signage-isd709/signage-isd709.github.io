@@ -1,104 +1,52 @@
-@charset "UTF-8";
-/* CSS Document */
-@font-face {
-    font-family: 'robato';
-    src: url('../font/RobotoSlab-Light.ttf');
-    font-weight: normal;
-    font-style: normal;
+@charset  "UTF-8";
+
+#weather li
+{
+	display: inline-block
 }
 
-#weather {
-  width: 100%;
-  margin: 0px auto;
-  font-family: robato;
-  color: #fff; 
-  text-align: center;
-  text-transform: uppercase;
-}
-
-i {
-  color: #fff;
-  font-size: 100px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.0;
-  text-transform: none;
-}
-
-.icon-0:before { content: ":"; }
-.icon-1:before { content: "p"; }
-.icon-2:before { content: "S"; }
-.icon-3:before { content: "Q"; }
-.icon-4:before { content: "S"; }
-.icon-5:before { content: "W"; }
-.icon-6:before { content: "W"; }
-.icon-7:before { content: "W"; }
-.icon-8:before { content: "W"; }
-.icon-9:before { content: "I"; }
-.icon-10:before { content: "W"; }
-.icon-11:before { content: "I"; }
-.icon-12:before { content: "I"; }
-.icon-13:before { content: "I"; }
-.icon-14:before { content: "I"; }
-.icon-15:before { content: "W"; }
-.icon-16:before { content: "I"; }
-.icon-17:before { content: "W"; }
-.icon-18:before { content: "U"; }
-.icon-19:before { content: "Z"; }
-.icon-20:before { content: "Z"; }
-.icon-21:before { content: "Z"; }
-.icon-22:before { content: "Z"; }
-.icon-23:before { content: "Z"; }
-.icon-24:before { content: "E"; }
-.icon-25:before { content: "E"; }
-.icon-26:before { content: "3"; }
-.icon-27:before { content: "a"; }
-.icon-28:before { content: "A"; }
-.icon-29:before { content: "a"; }
-.icon-30:before { content: "A"; }
-.icon-31:before { content: "6"; }
-.icon-32:before { content: "1"; }
-.icon-33:before { content: "6"; }
-.icon-34:before { content: "1"; }
-.icon-35:before { content: "W"; }
-.icon-36:before { content: "1"; }
-.icon-37:before { content: "S"; }
-.icon-38:before { content: "S"; }
-.icon-39:before { content: "S"; }
-.icon-40:before { content: "M"; }
-.icon-41:before { content: "W"; }
-.icon-42:before { content: "I"; }
-.icon-43:before { content: "W"; }
-.icon-44:before { content: "a"; }
-.icon-45:before { content: "S"; }
-.icon-46:before { content: "U"; }
-.icon-47:before { content: "S"; }
-
-#weather h2 {
-  margin: 0 0 0px;
-  color: #fff;
-  font-family: robato;
-  font-size: 50px;
-  font-weight: 200;
-  text-align: center;
-  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
-}
-#weather h3 {
-  font-family: robato;
-  color: #fff;
-  margin: 0px;
-}
-
-#weather ul {
-  margin: 0;
-  padding: 0;
-}
-
-#weather li {
-  display: inline-block;
-}
-#weather hr {
-    border-top: 1px solid #8c8b8b;
+#weather hr
+{
 	border-bottom: 1px solid #fff;
+	border-top: 1px solid #8c8b8b
 }
 
+#weather ul
+{
+	margin: 0;
+	padding: 0
+}
+
+#weather h3
+{
+	color: #fff;
+	font-family: robato;
+	margin: 0
+}
+
+#weather
+{
+	color: #fff;
+	font-family: robato;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%
+}
+
+#weather h2
+{
+	color: #fff;
+	font: 200 50px robato;
+	margin: 0;
+	text-align: center;
+	text-shadow: 0 1px 3px rgba(0,0,0,.15)
+}
+
+@font-face {
+		font-family: "robato";
+		font-style: normal;
+		font-weight: 400;
+		src: url(../font/RobotoSlab-Light.ttf)
+	
+}

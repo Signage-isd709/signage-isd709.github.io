@@ -49,6 +49,7 @@ html, body {
   background: url(../signage_background_blur.png) no-repeat;
   margin-right: 0;
   width: 350px;
+  margin-top: 0;
 }
 /*Frosted Glass Effect*/
 .item-overlay {

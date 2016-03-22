@@ -14,10 +14,39 @@ mytime=setTimeout('displayClock()',refresh)
 }
 
 function displayClock() {
-var strcount
-var x = new Date()
-document.getElementById('timeClock').innerHTML = x;
-tt=refreshClock();
+	var d = new Date();
+  var hours = d.getHours();
+  var minutes = d.getMinutes();
+  var seconds = d.getSeconds();
+  var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  seconds = seconds < 10 ? '0'+seconds : seconds;
+  var strTime = hours + ':' + minutes + ':' + seconds + " " + ampm;
+  var weekday = new Array(7);
+ weekday[0]=  "Sun";
+ weekday[1] = "Mon";
+ weekday[2] = "Tues";
+ weekday[3] = "Wed";
+ weekday[4] = "Thurs";
+ weekday[5] = "Fri";
+ weekday[6] = "Sat";
+ var month = new Array();
+month[0] = "Jan";
+month[1] = "Feb";
+month[2] = "Mar";
+month[3] = "Apr";
+month[4] = "May";
+month[5] = "Jun";
+month[6] = "Jul";
+month[7] = "Aug";
+month[8] = "Sept";
+month[9] = "Oct";
+month[10] = "Nov";
+month[11] = "Dec";
+  var html = (weekday[d.getDay()]) + ", " + (month[d.getMonth()]) + " " + d.getDate() + ", " + d.getFullYear() + "<br>" + strTime;
+  tt = refreshClock();
 }
 
 head.ready(function () {

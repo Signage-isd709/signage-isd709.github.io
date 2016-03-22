@@ -6,60 +6,61 @@
 @charset "UTF-8";
 /*Font Package*/
 @font-face {
-    font-family: 'robato';
+  font-family: 'robato';
     src: url('../font/RobotoSlab-Light.ttf');
     font-weight: normal;
     font-style: normal;
 }
 /* Base */
 html, body {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: robato;
-    color: #fff;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: robato;
+  color: #fff;
 }
 /*frosting container*/
 .projector-container {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-  /*height: 1600px;*/
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  /*height: 1600px;*/;
 }
 /* Item Wrapper */
 .item-wrapper {
   position: relative;
-  height:100%;
-  width:100%
+  height: 100%;
+  width: 100%;
 }
 /*Item Style*/
 .item {
-    /*width: 32%;*/
-    width:350px;
-    margin-right: 2%;
-    margin-top: .3%;
-    float: right;
-    height: 100%;
-    overflow: hidden;
-    -webkit-box-shadow: 0px 0px 6px rgba(50, 50, 50, 0.25);
-    box-shadow: 0px 0px 6px rgba(50, 50, 50, 0.25);
-    background: url(../signage_background_blur.png) no-repeat;
-	/*z-index:99999;*/
+  width: 350px;
+  margin-right: 2%;
+  margin-top: .3%;
+  float: right;
+  height: 100%;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 6px rgba(50, 50, 50, 0.25);
+  box-shadow: 0px 0px 6px rgba(50, 50, 50, 0.25);
+  background: url(../signage_background_blur.png) no-repeat;
 }
 /*Last Item*/
 .item.last {
   background: url(../signage_background_blur.png) no-repeat;
   margin-right: 0;
-  width:350px;
+  width: 350px;
 }
 /*Frosted Glass Effect*/
 .item-overlay {
-    width: 100%;
-    height: 100%;
-	background: rgba(255, 75, 31, 0.4); /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, rgba(255, 75, 31, 0.4) , rgba(31, 221, 255, 0.4)); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, rgba(255, 75, 31, 0.4) , rgba(31, 221, 255, 0.4)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    /*background: rgba(255,255,255,0.4);*/
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 75, 31, 0.4);
+ /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, rgba(255, 75, 31, 0.4) , rgba(31, 221, 255, 0.4));
+ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, rgba(255, 75, 31, 0.4) , rgba(31, 221, 255, 0.4));
+ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: rgba(255,255,255,0.4);*/;
 }
 /*Full Width Class*/
 .full-width {
@@ -70,9 +71,9 @@ html, body {
   height: 100%;
 }
 /*Calendar Icon Displaying Date of Event Styling*/
-time.icon
-{
-  font-size: .5em; /* change icon size */
+time.icon {
+  font-size: .5em;
+ /* change icon size */
   float: left;
   display: block;
   /*position: relative;*/
@@ -88,8 +89,7 @@ time.icon
   transform-origin: 50% 10%;
 }
 /*Calendar Icon Displaying Date of Event Styling*/
-time.icon *
-{
+time.icon * {
   display: block;
   float: left;
   width: 100%;
@@ -99,8 +99,7 @@ time.icon *
   text-align: center;
 }
 /*Calendar Icon Displaying Date of Event Styling*/
-time.icon strong
-{
+time.icon strong {
   font-size: 1.4em;
   position: absolute;
   top: 0;
@@ -113,15 +112,13 @@ time.icon strong
   box-shadow: 0 2px 0 #837373;
 }
 /*Calendar Icon Displaying Date of Event Styling*/
-time.icon em
-{
+time.icon em {
   position: absolute;
   color: #E51B24;
   bottom: 0.3em;
 }
-
-time.icon span
-{
+/*Calendar Icon Displaying Date of Event Styling*/
+time.icon span {
   width: 100%;
   font-size: 2.8em;
   letter-spacing: -0.05em;
@@ -130,39 +127,39 @@ time.icon span
 }
 /*Container for all Sidebar Divs*/
 #sidebar_contents {
-	padding-top: 5px;
-	overflow: hidden;
-	width: auto;
-	height: 100%;
-	z-index: 99998;
+  padding-top: 5px;
+  overflow: hidden;
+  width: auto;
+  height: 100%;
+  z-index: 99998;
 }
 /* Background */
 #pp-background {
-    position: fixed;
-    top: 0;
-    left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 /*Clock Div Styling*/
 #timeClock {
-	width:350px;
-	height: 60px;
-	font-size: 30px;
+  width: 350px;
+  height: 60px;
+  font-size: 30px;
 }
 /*Weather Div*/
 #weather {
-	width: 350px;
-	height: 420px;
+  width: 350px;
+  height: 420px;
 }
 /*Calendar Event Container*/
 #eventWrapper {
-	margin-left: 5px;
+  margin-left: 5px;
 }
 /*Slide-Show Div*/
 #slideshow {
-	float: left;
-	width: 1200px;
-	height: 900px;
-	position: absolute;
-	margin-top: 5%;
-	margin-left: 9%;
+  float: left;
+  width: 1200px;
+  height: 900px;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 9%;
 }

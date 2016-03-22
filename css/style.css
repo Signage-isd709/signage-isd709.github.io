@@ -69,6 +69,12 @@ html, body {
   height: 100%;
 }
 
+#timeClock {
+	width:350px;
+	height: 200px;
+	font-size: 24px;
+}
+
 time.icon
 {
   font-size: .5em; /* change icon size */

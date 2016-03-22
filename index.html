@@ -228,16 +228,16 @@ setTimeout(function(){ loading_screen.finish();}, 10000);
     <!---->
     <div class="item last">
       <div class="item-overlay"><img width="100%" src="img/isd_709_logo.png" style="padding-top:5px;"/>
-        <div id="sidebar_contents" style="padding-top:5px; overflow:hidden; width:auto; height:100%; z-index: 99998;">
+        <div id="sidebar_contents">
           <center>
             <div id="timeClock"></div>
           </center>
-          <div id="weather" style="width:345px; height:420px;"></div>
-          <div id="eventlist" style="width: auto; overflow:hidden;" class="CalEvents" width="100%" height="25%"></div>
+          <div id="weather"></div>
+          <div id="eventlist" class="CalEvents"></div>
         </div>
       </div>
     </div>
-    <div class="item" style="float:left;width:1200px; height:900px; position:absolute; margin-top:5%; margin-left:9%;">
+    <div id="slideshow" class="item">
       <div class="item-overlay">
         <iframe src="https://docs.google.com/presentation/embed?id=1bG8dHatohJiE3AIyzSMJ0gdWtRNz8JG987e620VGyCE&amp;start=true&amp;loop=true&amp;rm=minimal&amp;delayms=3000" frameborder="0"style="width:100%; height:100%;"></iframe>
       </div>

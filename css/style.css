@@ -42,11 +42,11 @@ html, body {
   overflow: hidden;
   -webkit-box-shadow: 0px 0px 6px rgba(50, 50, 50, 0.25);
   box-shadow: 0px 0px 6px rgba(50, 50, 50, 0.25);
-  background: url(../signage_background_blur.png) no-repeat;
+  background: url(../img/signage_background_blur.png) no-repeat;
 }
 /*Last Item*/
 .item.last {
-  background: url(../signage_background_blur.png) no-repeat;
+  background: url(../img/signage_background_blur.png) no-repeat;
   margin-right: 0;
   width: 350px;
   margin-top: 0;

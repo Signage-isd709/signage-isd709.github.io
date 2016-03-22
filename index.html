@@ -46,7 +46,9 @@ month[9] = "Oct";
 month[10] = "Nov";
 month[11] = "Dec";
   var html = (weekday[d.getDay()]) + ", " + (month[d.getMonth()]) + " " + d.getDate() + ", " + d.getFullYear() + "<br>" + strTime;
+  document.getElementById('timeClock').innerHTML = html;
   tt = refreshClock();
+  
 }
 
 head.ready(function () {

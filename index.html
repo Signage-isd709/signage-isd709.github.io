@@ -114,8 +114,8 @@ function getWeather() {
       html = '<div id="weatherIcon"></div><div>'+weather.currently+'</div><div id="current"><h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2><br><h3>'+weather.city+', '+weather.region+'</h3></div>';
       html += '<ul>';
       html += '<hr><li>Wind: '+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li><hr>';
-      html += '<li><strong>' + weather.forecast[1].day + '</strong>: ' + weather.forecast[1].text + ' '+ weather.forecast[1].high + '&#8457; ' + weather.forecast[1].low + '&#8457;</li><hr>';
-      html += '<li><strong>'  + weather.forecast[2].day + '</strong>: ' + weather.forecast[2].text + ' '+ weather.forecast[2].high + '&#8457; ' + weather.forecast[2].low + '&#8457;</li><hr></ul>';
+      html += '<li><strong>' + weather.forecast[1].day + ':</strong> ' + weather.forecast[1].text + ' '+ weather.forecast[1].high + '&#8457; ' + weather.forecast[1].low + '&#8457;</li><hr>';
+      html += '<li><strong>'  + weather.forecast[2].day + ':</strong> ' + weather.forecast[2].text + ' '+ weather.forecast[2].high + '&#8457; ' + weather.forecast[2].low + '&#8457;</li><hr></ul>';
   
 	weather.code = 6;  
   

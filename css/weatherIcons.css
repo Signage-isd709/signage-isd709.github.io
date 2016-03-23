@@ -121,11 +121,12 @@
   margin: -2em 1em;
 }
 .moon {
+  margin-top: 1.3em;
   border-radius: 50%;
   box-shadow: -20px 20px 0 #fff;
   height: 6.5em;
   width: 6.5em;
-  margin-left: 50%;
+  margin-left: 5em;
   animation: moon 10s infinite linear;
 }
 .rain,

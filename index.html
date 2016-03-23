@@ -104,11 +104,6 @@ head.ready(function () {
          sortDescending: false
         });
 	 });
-head.ready(function() {
-  getWeather(); //Get the initial weather.
-  setInterval(getWeather(), 3000); //Update the weather every 10 minutes.
-  console.log("Weather reloaded!");
-});
 
 function getWeather() {
   $.simpleWeather({
@@ -207,6 +202,8 @@ setInterval(function(){
   speed: 17000
  });
  console.log("Calendar Reloaded!");
+ getWeather();
+ console.log("Weather Reloaded!");
 }, 3000);
 </script>
 </head>

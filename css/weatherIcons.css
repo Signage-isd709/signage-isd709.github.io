@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .icon {
   position: relative;
   display: inline-block;
@@ -212,11 +214,9 @@
   border-bottom: 0.625em solid transparent;
   border-left: 0.375em solid;
 }
-.flake:before {
-  content: '\2744';
-}
 .flake:before,
 .flake:after {
+  content: '\2744';
   position: absolute;
   top: 50%;
   left: 50%;

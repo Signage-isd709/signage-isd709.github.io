@@ -285,13 +285,13 @@
 
 @keyframes moon {
   0% {
-    -webkit-transform: rotate(40deg);
+    -webkit-transform: rotate(25deg);
   }
   50% {
-    -webkit-transform: rotate(20deg);
+    -webkit-transform: rotate(8deg);
   }
   100% {
-    -webkit-transform: rotate(40deg);
+    -webkit-transform: rotate(25deg);
   }
 }
 

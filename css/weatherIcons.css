@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: 'unicodeFallback';
-    src: url('../font/FreeSans.ttf');
+  font-family: 'Symbola';
+    src: url('../font/Symbola.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -223,7 +223,7 @@
 }
 .flake:before,
 .flake:after {
-  font-family: 'unicodeFallback';
+  font-family: 'Symbola';
   content: '\2744';
   position: absolute;
   top: 50%;
@@ -235,7 +235,7 @@
   animation: spin 8s linear infinite reverse;
 }
 .flake:after {
-  font-family: 'unicodeFallback';
+  font-family: 'Symbola';
   color: #fff;
   margin: 0.125em 0 0 -1em;
   font-size: 1.5em;
@@ -243,7 +243,7 @@
   animation: spin 14s linear infinite;
 }
 .flake:nth-child(2):before {
-  font-family: 'unicodeFallback';
+  font-family: 'Symbola';
   color: #fff;
   margin: -0.5em 0 0 0.25em;
   font-size: 1.25em;
@@ -251,7 +251,7 @@
   animation: spin 10s linear infinite;
 }
 .flake:nth-child(2):after {
-  font-family: 'unicodeFallback';
+  font-family: 'Symbola';
   color: #fff;
   margin: 0.375em 0 0 0.125em;
   font-size: 2em;

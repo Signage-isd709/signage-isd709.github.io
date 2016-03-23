@@ -121,11 +121,12 @@
   margin: -2em 1em;
 }
 .moon {
-border-radius: 50%;
-box-shadow: -20px 20px 0 #fff;
-height: 6.5em;
-width: 6.5em;
-animation: moon 10s infinite linear;
+  border-radius: 50%;
+  box-shadow: -20px 20px 0 #fff;
+  height: 6.5em;
+  width: 6.5em;
+  margin-left: 50%;
+  animation: moon 10s infinite linear;
 }
 .rain,
 .lightning,
@@ -283,10 +284,13 @@ animation: moon 10s infinite linear;
 
 @keyframes moon {
   0% {
+    -webkit-transform: rotate(20deg);
+  }
+  50% {
     -webkit-transform: rotate(7deg);
   }
   100% {
-    -webkit-transform: rotate(-7deg);
+    -webkit-transform: rotate(20deg);
   }
 }
 

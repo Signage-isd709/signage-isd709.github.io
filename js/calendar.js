@@ -33,11 +33,10 @@
 
         $.each(data.items, function(e, item) {
           var eventdate = item.start.dateTime || item.start.date ||'';
-          console.log(item.start.dateTime);
-          console.log(item.start.date);
           var summary = item.summary || '';
 					var description = item.description;
-					var location = item.location;
+					//var location = item.location;
+					var location = "Historic Old Central High School";
 					var eventDate = formatDate(eventdate, defaults.dateFormat.trim());
 					var monthCal = eventDate[1];
 					var dayNumCal = eventDate[2];

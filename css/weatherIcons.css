@@ -120,7 +120,12 @@
 .cloud + .sun {
   margin: -2em 1em;
 }
-
+.moon {
+border-radius: 50%;
+box-shadow: -20px 20px 0 #fff;
+height: 6.5em;
+width: 6.5em;
+}
 .rain,
 .lightning,
 .snow {
@@ -272,6 +277,15 @@
   100% {
     left: 0%;
     opacity: 0;
+  }
+}
+
+@keyframes moon {
+  0% {
+    -webkit-transform: rotate(7deg);
+  }
+  100% {
+    -webkit-transform: rotate(-7deg);
   }
 }
 

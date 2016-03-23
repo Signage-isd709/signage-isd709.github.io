@@ -142,7 +142,7 @@
 }
 
 .snow {
-  color: #fff;
+  color: #000;
 }
 
 .rain:after {
@@ -154,8 +154,7 @@
   width: 1.125em;
   height: 1.125em;
   margin: -1em 0 0 -0.25em;
-  /*background: #0cf;*/
-  background: #fff;
+  background: #0cf;
   border-radius: 100% 0 60% 50% / 60% 0 100% 50%;
   box-shadow:
     0.625em 0.875em 0 -0.125em rgba(255,255,255,0.2),
@@ -226,27 +225,27 @@
   top: 50%;
   left: 50%;
   margin: -1.025em 0 0 -1.0125em;
-  color: #fff;
+  color: #000;
   list-height: 1em;
   opacity: 0.2;
   animation: spin 8s linear infinite reverse;
 }
 .flake:after {
   margin: 0.125em 0 0 -1em;
-  color: #fff;
+  color: #000;
   font-size: 1.5em;
   opacity: 0.4;
   animation: spin 14s linear infinite;
 }
 .flake:nth-child(2):before {
-  color: #fff;
+  color: #000;
   margin: -0.5em 0 0 0.25em;
   font-size: 1.25em;
   opacity: 0.2;
   animation: spin 10s linear infinite;
 }
 .flake:nth-child(2):after {
-  color: #fff;
+  color: #000;
   margin: 0.375em 0 0 0.125em;
   font-size: 2em;
   opacity: 0.4;
@@ -298,22 +297,22 @@
 
 @keyframes rain {
   0% {
-    background: #fff;
+    background: #0cf;
     box-shadow:
       0.625em 0.875em 0 -0.125em rgba(255,255,255,0.2),
       -0.875em 1.125em 0 -0.125em rgba(255,255,255,0.2),
-      -1.375em -0.125em 0 #fff;
+      -1.375em -0.125em 0 #0cf;
   }
   25% {
     box-shadow:
       0.625em 0.875em 0 -0.125em rgba(255,255,255,0.2),
-      -0.875em 1.125em 0 -0.125em #fff,
+      -0.875em 1.125em 0 -0.125em #0cf,
       -1.375em -0.125em 0 rgba(255,255,255,0.2);
   }
   50% {
     background: rgba(255,255,255,0.3);
     box-shadow:
-      0.625em 0.875em 0 -0.125em #fff,
+      0.625em 0.875em 0 -0.125em #0cf,
       -0.875em 1.125em 0 -0.125em rgba(255,255,255,0.2),
       -1.375em -0.125em 0 rgba(255,255,255,0.2);
   }
@@ -321,7 +320,7 @@
     box-shadow:
       0.625em 0.875em 0 -0.125em rgba(255,255,255,0.2),
       -0.875em 1.125em 0 -0.125em rgba(255,255,255,0.2),
-      -1.375em -0.125em 0 #fff;
+      -1.375em -0.125em 0 #0cf;
   }
 }
 

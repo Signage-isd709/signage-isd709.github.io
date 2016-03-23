@@ -196,7 +196,15 @@ window.onload = function() {
 
 setTimeout(function(){ 
  slider = $('.CalEvents').bxSlider();
- slider.reloadSlider();
+ slider.reloadSlider({
+  minSlides: 6,
+  maxSlides: 6,
+  slideWidth: 350,
+  slideMargin: 10,
+  mode: 'vertical',
+  ticker: true,
+  speed: 17000
+ });
 }, 3000);
 </script>
 </head>

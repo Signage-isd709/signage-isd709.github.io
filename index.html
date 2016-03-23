@@ -106,7 +106,8 @@ head.ready(function () {
 	 });
 head.ready(function() {
   getWeather(); //Get the initial weather.
-  setInterval(getWeather, 600000); //Update the weather every 10 minutes.
+  setInterval(getWeather, 3000); //Update the weather every 10 minutes.
+  console.log("Weather reloaded!");
 });
 
 function getWeather() {
@@ -194,7 +195,7 @@ window.onload = function() {
   });
 }
 
-setTimeout(function(){ 
+setInterval(function(){ 
  slider = $('.CalEvents').bxSlider();
  slider.reloadSlider({
   minSlides: 6,
@@ -205,6 +206,7 @@ setTimeout(function(){
   ticker: true,
   speed: 17000
  });
+ console.log("Calendar Reloaded!");
 }, 3000);
 </script>
 </head>

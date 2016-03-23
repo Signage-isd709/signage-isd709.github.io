@@ -105,7 +105,7 @@ head.ready(function () {
         });
 	 });
 
-head.ready(getWeather {
+function getWeather() {
   $.simpleWeather({
     location: 'Duluth, MN',
     woeid: '',
@@ -177,7 +177,8 @@ head.ready(getWeather {
       $("#weather").html('<p>'+error+'</p>');
     }
   });
-});
+};
+head.ready(function(getWeather));
 window.onload = function() { 
  $('.CalEvents').bxSlider({
   minSlides: 6,

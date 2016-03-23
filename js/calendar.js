@@ -34,9 +34,8 @@
         $.each(data.items, function(e, item) {
           var eventdate = item.start.dateTime || item.start.date ||'';
           var summary = item.summary || '';
-					var description = item.description;
-					//var location = item.location;
-					var location = "Historic Old Central High School";
+					//var description = item.description;
+					var location = item.location;
 					var eventDate = formatDate(eventdate, defaults.dateFormat.trim());
 					var monthCal = eventDate[1];
 					var dayNumCal = eventDate[2];
@@ -44,12 +43,8 @@
 					var calIcon;
 					calIcon = '<time datetime= ' + item.start.date + ' class="icon"><em>' + dayCal + '</em><strong>' + monthCal + '</strong><span>' + dayNumCal + '</span></time>';
 					s = '<div class="eventtitle">'+ summary +'</div>';
-					//s +='<div class="eventdate"> When: '+ eventDate[0]; +'</div>';
 					if(location) {
 						s +='<div class="location">Where: '+ location +'</div>';
-					}
-					if(description) {
-						s +='<div class="description">'+ description +'</div>';
 					}
 					$($div).append('<div name="eventWrapper" class="slide"><table><td><div name="eventIcon" align="left">' + calIcon + '</div></td><td><div name="eventInfo">' + s + '</div></td></table>');
         });

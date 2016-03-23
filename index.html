@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ISD 709 Signage</title>
+<link rel="stylesheet" type="text/css" href="css/pleasewait.min.css"/>
+<script src="https://code.jquery.com/jquery-2.1.4.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/head.min.js" data-headjs-load="js/init.js"></script>
+<script>
+function refreshClock(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('displayClock()',refresh)
+}
+function displayClock() {
+  var d = new Date();
+  var hours = d.getHours();
+  var minutes = d.getMinutes();
+  var seconds = d.getSeconds();
+  var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  seconds = seconds < 10 ? '0'+seconds : seconds;
+  var strTime = hours + ':' + minutes + ':' + seconds + " " + ampm;
+  var weekday = new Array(7);
+  weekday[0]=  "Sun";
+  weekday[1] = "Mon";
+  weekday[2] = "Tues";
+  weekday[3] = "Wed";
+  weekday[4] = "Thurs";
+  weekday[5] = "Fri";
+  weekday[6] = "Sat";
+  var month = new Array();
+  month[0] = "Jan";
+  month[1] = "Feb";
+  month[2] = "Mar";
+  month[3] = "Apr";
+  month[4] = "May";
+  month[5] = "Jun";
+  month[6] = "Jul";
+  month[7] = "Aug";
+  month[8] = "Sept";
+  month[9] = "Oct";
+  month[10] = "Nov";
+  month[11] = "Dec";
+  var html = (weekday[d.getDay()]) + ", " + (month[d.getMonth()]) + " " + d.getDate() + ", " + d.getFullYear() + "<br>" + strTime;
+  document.getElementById('timeClock').innerHTML = html;
+  tt = refreshClock();
+  
+}
+head.ready(function () {
+    'use strict';
+    // Vars
+    var $window = $(window),
+        $ppBackground = $('#pp-background'),
+        $ppContainer = $('#pp-container'),
+        aspectRatio = $ppBackground.width() / $ppBackground.height();
+    // Background resize handler
+    var resizeBackground = function () {
+        if (($window.width() / $window.height()) < aspectRatio) {
+            $ppBackground.removeClass().addClass('full-height');
+        } else {
+            $ppBackground.removeClass().addClass('full-width');
+        }
+    };
+    var resizeHandler = function () {
+        resizeBackground();
+        $('.item').each(function (index, item) {
+            project(item);
+        });
+    };
+    // Projection
+    var topOffset,
+        leftOffset,
+        offset;
+    var project = function (el) {
+        // Calculate Offsets
+        topOffset = ($ppContainer.offset().top - $(el).offset().top) + $window.scrollTop();
+        leftOffset = $ppContainer.offset().left - $(el).offset().left;
+        offset = (leftOffset + 'px' + ' ' + topOffset + 'px');
+        // Shift background on each element
+        // to match parent container background 
+        $(el).css({
+            'background-position': offset,
+            'background-size': $ppBackground.width() + 'px' + ' ' + $ppBackground.height() + 'px'
+        });
+    };
+    // Initialise
+    var init = function () {
+        resizeBackground(); // Resize Background for first time
+        $window.resize(resizeHandler);
+        $window.on('scroll', resizeHandler);
+        $('.item').each(function (index, item) {
+            project(item);
+        });
+    };
+    // Start it all
+    init();
+});
+ head.ready(function() {
+       $('#eventlist').gCalReader({
+         calendarId:'web.printshop@isd709.org',
+         apiKey:'AIzaSyCHhi-u9BPj-jFIqLVw4VKpzZUzeriG1ow',
+         sortDescending: false
+        });
+	 });
+head.ready(function() {
+  $.simpleWeather({
+    location: 'Duluth, MN',
+    woeid: '',
+    unit: 'f',
+    success: function(weather) {
+      html = '<div id="weatherIcon" class="icon"></div><div>'+weather.currently+'</div><div id="current"><h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2><br><h3>'+weather.city+', '+weather.region+'</h3></div>';
+      html += '<ul>';
+      html += '<hr><li>Wind: '+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li><hr>';
+      html += '<li><strong>' + weather.forecast[1].day + '</strong>: ' + weather.forecast[1].text + ' '+ weather.forecast[1].high + '&#8457; ' + weather.forecast[1].low + '&#8457;</li><hr>';
+      html += '<li><strong>'  + weather.forecast[2].day + '</strong>: ' + weather.forecast[2].text + ' '+ weather.forecast[2].high + '&#8457; ' + weather.forecast[2].low + '&#8457;</li><hr></ul>';
+  
+	weather.code = 6;  
+  
+      $("#weather").html(html);
+      if (weather.code == 5 || weather.code == 6 || weather.code == 7 || weather.code == 17 || weather.code == 18 || weather.code == 35) {
+	$("#weatherIcon").html('<div class="icon snow-rain"><div class="cloud"></div><div class="snow"><div class="flake"></div><div class="flake"></div></div><div style="background: transparent" class="rain" style=".25em 0 0 -1.25em;"></div></div>');
+	}
+	else if (weather.code == 13 || weather.code == 14 || weather.code == 15 || weather.code == 16 || weather.code == 41 || weather.code == 42 || weather.code == 43 || weather.code == 46) {
+	$("#weatherIcon").html('<div class="icon flurries"><div class="cloud"></div><div class="snow"><div class="flake"></div><div class="flake"></div></div></div>');
+	}
+	else if (weather.code == 10 || weather.code == 11 || weather.code == 12 || weather.code == 40) {
+	$("#weatherIcon").html('<div class="icon rainy"><div class="cloud"></div><div class="rain"></div></div>');
+	}
+	else if (weather.code == 19 || weather.code == 21 || weather.code == 22) {
+	$("#weatherIcon").html('<div class="icon hazy" style="margin-top: 10px; width: 12em; height: 9em; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: #fff; border-radius: 5px;"><div style=" width: 12em; height: 8em; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: #fff; border-radius: 5px;"><div class="icon" style="border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: #fff; border-radius: 5px; height: 7em;"><div class="sun"><div class="rays"><div></div></div></div></div>');
+	}
+	else if (weather.code == 32 || weather.code == 34 || weather.code == 36) {
+	$("#weatherIcon").html('<div class="icon sunny"><div class="sun"><div class="rays"></div></div></div>');
+	}
+	else if (weather.code == 8 || weather.code == 9) {
+	$("#weatherIcon").html('<div class="icon drizzle"><div class="rain"></div></div>');
+	}
+	else if (weather.code == 23 || weather.code == 24) {
+	$("#weatherIcon").html('<div class="icon windy"><div class="cloud" style="animation: cloudwindy 2s linear infinite;"></div></div>');
+	}
+	else if (weather.code == 31 || weather.code == 33) {
+	$("#weatherIcon").html('<div class="icon clear-fair-night"><div class="moon"></div></div>');	
+	}
+	else if (weather.code == 25) {
+	$("#weatherIcon").html('<div class="icon cold"><div class="coldflake"></div></div>');
+	}
+	else if (weather.code == 20) {
+	$("#weatherIcon").html('<div class="foggy" style="width: 12em; height: 9em; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: #fff; border-radius: 5px;"><div style=" width: 12em; height: 8em; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: #fff; border-radius: 5px;"><div class="icon" style="border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: #fff; border-radius: 5px; height: 7em;"><div class="cloud"></div></div></div></div>');
+	}
+	else if (weather.code == 26) {
+	$("#weatherIcon").html('<div class="icon cloudy"><div class="cloud" style="transform: none; animation: cloudwindy 5s linear infinite;"></div><div class="cloud" style="opacity: 0; transform: none; background: #fff; animation: cloudwindy 5s linear infinite; animation-direction: reverse;"></div></div>');
+	}
+	else if (weather.code == 28) {
+	$("#weatherIcon").html('<div class="icon day-most-cloud"><div class="sun"><div class="rays"></div></div><div class="cloud" style="transform: none; animation: cloudwindy 8s linear infinite;"></div><div class="cloud" style="opacity: 0; transform: none; background: #fff; animation: cloudwindy 8s linear infinite; animation-direction: reverse;"></div></div>');	
+	}
+	else if (weather.code == 30) {
+	$("#weatherIcon").html('<div class="icon day-partly-cloudy"><div class="cloud"></div><div class="sun"><div class="rays"></div></div> </div>');	
+	}
+	else if (weather.code == 44) {
+	$("#weatherIcon").html('<div class="icon cloudy"><div class="cloud"></div><div class="cloud"></div></div>');	
+	}
+	else if (weather.code == 27) {
+	$("#weatherIcon").html('<div class="icon most-cloudy-night"><div class="cloud" style="transform: none; animation: cloudwindy 8s linear infinite;"></div><div class="cloud" style="opacity: 0; transform: none; background: #fff; animation: cloudwindy 8s linear infinite; animation-direction: reverse;"></div><div class="moon"></div></div>');	
+	}
+	else if (weather.code == 29) {
+	$("#weatherIcon").html('<div class="icon partly-cloudy-night"><div class="cloud"></div><div class="sun"></div> ');	
+	}
+	else if (weather.code == 0 || weather.code == 1 || weather.code == 2 || weather.code == 3 || weather.code == 4 || weather.code == 37 || weather.code == 38 || weather.code == 45 || weather.code || 47) {
+	$("#weatherIcon").html('<div class="icon thunder-storm"><div class="stormcloud" style="z-index:0"></div><div class="lightning" style="background: transparent"><div class="bolt" style="z-index:3; background: transparent"></div><div class="bolt" style="z-index:3; background: transparent"></div></div><div class="rain" style="z-index: 1"></div></div>');
+	}
+	console.log(weather.code);
+    },
+    error: function(error) {
+      $("#weather").html('<p>'+error+'</p>');
+    }
+  });
+});
+window.onload = function() { 
+ $('.CalEvents').bxSlider({
+  minSlides: 6,
+  maxSlides: 6,
+  slideWidth: 350,
+  slideMargin: 10,
+  mode: 'vertical',
+  ticker: true,
+  speed: 17000
+  });
+}
+</script>
+</head>
+<body onLoad="displayClock();">
+<script src="js/pleasewait.js" type="text/javascript"></script> 
+<script>
+var loading_screen = pleaseWait({
+  logo: "img/isd_709_logo.png",
+  backgroundColor: 'linear-gradient(to left, rgba(255, 75, 31, 0.4) , rgba(31, 221, 255, 0.4))',
+  loadingHtml: "<p>Inspire Brillance: <em>Our Mission</em></p><div class='sk-spinner sk-spinner-pulse'></div>"
+});
+<!--Flip Logo<div class='sk-spinner sk-rotating-plane'><div class='sk-rect1'></div><div class='sk-rect2'></div><div class='sk-rect3'></div><div class='sk-rect4'></div><div class='sk-rect5'></div></div>-->
+<!--InOutLogo<div class='sk-double-bounce'><div class='sk-child sk-double-bounce1'></div><div class='sk-child sk-double-bounce2'></div></div>-->
+<!--Pulse Logo<div class='sk-spinner sk-spinner-pulse'></div>-->
+setTimeout(function(){ loading_screen.finish();}, 10000);
+</script>
+<div id="pp-container" class="projector-container"> <img src="../img/signage_background.png" id="pp-background" alt="">
+  <div class="item-wrapper"> 
+    <!---->
+    <div class="item last">
+      <div class="item-overlay"><img width="100%" src="img/isd_709_logo.png" style="padding-top:5px;"/>
+        <div id="sidebar_contents">
+          <center>
+            <div id="timeClock"></div>
+          </center>
+          <div id="weather"></div>
+          <div id="eventlist" class="CalEvents"></div>
+        </div>
+      </div>
+    </div>
+    <div id="slideshow" class="item">
+      <div class="item-overlay">
+        <iframe src="https://docs.google.com/presentation/embed?id=1bG8dHatohJiE3AIyzSMJ0gdWtRNz8JG987e620VGyCE&amp;start=true&amp;loop=true&amp;rm=minimal&amp;delayms=3000" frameborder="0"style="width:100%; height:100%;"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

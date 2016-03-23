@@ -105,6 +105,8 @@ head.ready(function () {
         });
 	 });
 
+head.ready(getWeather());
+
 function getWeather() {
   $.simpleWeather({
     location: 'Duluth, MN',

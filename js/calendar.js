@@ -108,9 +108,6 @@
       var monthCal = calendar.months.full[month];
       var daynumCal = dayNum;
       var dayCal = calendar.days.full[d.getDay()];
-      console.log(monthCal);
-      console.log(daynumCal);
-      console.log(dayCal);
 
       switch (strFormat) {
         case 'ShortTime':

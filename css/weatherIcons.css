@@ -272,6 +272,18 @@
 }
 .sleetflake:after {
   font-family: 'Symbola';
+  content: '\2744';
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin: -1.025em 0 0 -1.0125em;
+  color: #fff;
+  list-height: 1em;
+  opacity: 0.2;
+  animation: spin 8s linear infinite reverse;
+}
+.sleetflake:after {
+  font-family: 'Symbola';
   color: #fff;
   margin: 1em 0 0 -1.25em;
   font-size: 1.8em;

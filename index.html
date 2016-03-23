@@ -202,9 +202,11 @@ setInterval(function(){
   speed: 17000
  });
  console.log("Calendar Reloaded!");
+}, 3600000);
+setInterval(function() {
  getWeather();
  console.log("Weather Reloaded!");
-}, 3000);
+}, 600000);
 </script>
 </head>
 <body onLoad="displayClock();">
